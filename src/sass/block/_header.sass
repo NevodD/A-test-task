@@ -14,6 +14,7 @@
 
 .header__tel
   color: #fff
+  flex-shrink: 0
 
 .header__content
   width: 54%
@@ -25,6 +26,7 @@
 
 .header__menu
   display: inline-flex
+  flex-wrap: wrap
   align-items: center
   justify-content: space-between
   width: 100%
@@ -36,6 +38,9 @@
 .header-top-menu 
   max-width: 420px
   margin-left: 75px
+  @include container
+    margin-left: 25px
+
 
   //margin-right: 60px
 
