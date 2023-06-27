@@ -1,0 +1,81 @@
+.burger,
+.closed
+  z-index: 10
+  position: absolute
+  width: 45px
+  height: 45px
+  // top: 20%
+  right: 20px
+  background-color: transparent
+  border: none
+  padding: 0
+  cursor: pointer
+  @media screen and ( min-width: 768px )
+    width: 60px
+    height: 70px
+
+  @media screen and ( min-width: 768px )
+    display: none
+
+
+.burger::before,
+.burger::after
+  content: ""
+  position: absolute
+  background-color: #000000
+  top: 10px
+  left: 10px
+  width: 25px
+  height: 2px
+  box-shadow: 0 10px 0 0 #000000
+  @media screen and ( min-width: 768px )
+    top: 15px
+    left: 10.5px
+    width: 40px
+    height: 4px
+    box-shadow: 0 15px 0 0 #000000
+.burger::after
+  box-shadow: none
+  top: 30px
+  @media screen and ( min-width: 768px )
+    top: 45px
+
+.burger:active::before
+  transition: 0.1s linear
+  background-color: #c4c4c4
+  box-shadow: 0 7px 0 0 #c4c4c4
+.burger:active::after
+  background-color: #c4c4c4
+  transition: 0.1s linear
+
+
+.closed
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    background-color: #000000
+    top: 20px
+    left: 7px
+    width: 30px
+    height: 2px
+    @media screen and ( min-width: 768px )
+      top: 30px
+      left: 7px
+      width: 40px
+      height: 4px
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+  @media screen and ( min-width: 768px )
+    &:hover
+      transform: scale(1.2)
+    &:active
+      transform: scale(1)
+
+.closed:active
+  &::before,
+  &::after
+    transition: 0.1s linear
+    background-color: #c4c4c4

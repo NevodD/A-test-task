@@ -1,0 +1,60 @@
+@import '../../../node_modules/swiper/swiper-bundle'
+
+.swiper
+  width: 100%
+  height: auto
+  margin: auto
+  // display: flex
+  // justify-content: center
+  // align-items: center
+
+.swiper-slide
+  text-align: center
+
+  // padding-bottom: 30px
+
+.swiper-img
+  max-width: 100%
+  height: auto
+
+.swiper-button-next,
+.swiper-button-prev
+  transition: all 0.2s linear
+  color: gray
+  &:hover
+    color: black
+
+.swiper-button-next::after,
+.swiper-button-prev::after
+  font-size: 60px
+
+.swiper-pagination
+  position: static
+
+.swiper-pagination-bullet
+  width: 20px
+  height: 20px
+  color: #fff
+  font-size: 12px
+  text-align: center
+  line-height: 20px
+
+.swiper-pagination-bullet-active
+  background: #000
+
+.swiper-horizontal > .swiper-scrollbar
+  background: #0f0
+  position: static
+  // top: 0
+  // bottom: 100%
+
+.swiper-scrollbar
+  cursor: pointer
+
+// .swiper-scrollbar-drag
+
+// .swiper-pagination
+// .swiper-pagination-clickable 
+// .swiper-pagination-bullets 
+//.swiper-pagination-horizontal
+//  bottom: 0
