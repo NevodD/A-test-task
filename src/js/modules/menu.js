@@ -3,7 +3,7 @@ export const menu = () => {
 
   const burgerText = document.querySelector(".burger-text");
 
-  // const headerMenu = document.querySelector(".header-menu");
+  const headerMenu = document.querySelector(".header__content");
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("burger");
@@ -13,12 +13,13 @@ export const menu = () => {
     } else {
       burgerText.innerHTML = "Открыть меню";
     }
-    // headerMenu.classList.toggle("header-menu--active");
+    headerMenu.classList.toggle("active");
   });
-  const searchButton = document.querySelector('.search-button');
-  const headerSearchWrapper = document.querySelector('.header-search-wrapper');
+
+  const searchButton = document.querySelector(".search-button");
+  const headerSearchWrapper = document.querySelector(".header-search-wrapper");
   searchButton.addEventListener("click", () => {
-    headerSearchWrapper.classList.toggle("active")
-    searchButton.classList.toggle("close")
+    headerSearchWrapper.classList.toggle("active");
+    searchButton.classList.toggle("close");
   });
-}
+};

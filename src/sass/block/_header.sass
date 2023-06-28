@@ -1,28 +1,65 @@
-.header 
+.header
+  background-color: red
+
+.header-wrapper 
   display: flex
   align-items: center
   justify-content: space-between
-  background-color: red
 
-  @include mobile
-    background-color: #fff
+
+  //@include mobile
+  //  background-color: #fff
 
 .header__logo
   width: 138px
   height: 80px
   margin: 20px 
+  @include mobile
+    margin-left: 16px
+    width: 69px
+    height: 40px
+
+.header__logo_orange
+  display: none
+  @include mobile
+    display: block
 
 .header__tel
   color: #fff
   flex-shrink: 0
+  font-weight: 500
+  @include mobile
+    color: #000
+    order: 1
+    margin-top: 10px
 
 .header__content
   width: 54%
+  @include mobile
+    position: absolute
+    top: 0
+    left: 100% 
+    width: 100%
+    height: 100%
+    background-color: #fff
+    display: grid
+    align-items: center
+    transition: 0.3s
+    &.active
+      left: 0
 
 .header-menu-wrapper
   display: flex
   align-items: center
   justify-content: space-between
+  @include mobile
+    flex-direction: column
+    order: 1
+    align-items: start
+    margin-left: 16px
+
+.header-nav
+
 
 .header__menu
   display: inline-flex
@@ -32,7 +69,14 @@
   width: 100%
   margin-top: 12px
   margin-bottom: 12px
-
+  @include mobile
+    flex-direction: column
+    align-items: start
+    margin-left: 16px
+    margin-right: 16px
+    width: 90%
+    margin-top: 0px
+    margin-bottom: 0px
 .header__top-menu
 
 .header-top-menu 
@@ -40,14 +84,27 @@
   margin-left: 75px
   @include container
     margin-left: 25px
+  @include mobile
+    margin-left: 0px
+
+
 
 
   //margin-right: 60px
 
 .header-top-menu__item
   opacity: 0.7
+  @include mobile
+    border-bottom: 1px solid #F8F3F3
+    width: 100%
+    height: 48px 
   & > a
     color: #fff
+    @include mobile
+      display: flex
+      color: #000
+      height: 100%
+      align-items: center
 
 
 .header__main-menu 
@@ -55,10 +112,21 @@
 .header-main-menu 
   max-width: 790px
 
-.header-main-menu__item 
+
+.header-main-menu__item
+  @include mobile
+    border-bottom: 1px solid #F8F3F3
+    width: 100%
+    height: 50px
   & > a
     color: #fff
     font-size: 20px
+    @include mobile
+      display: flex
+      color: #000
+      font-size: 16px
+      height: 100%
+      align-items: center
 
 
 .header-search-wrapper
@@ -76,12 +144,23 @@
   //display: none
   &.active
     top: 0
+  @include container
+    height: 240px
+  @include mobile
+    position: static
+    height: 72px
     
 
 .header__search 
   position: relative
   width: 500px
   max-width: 90%
+  @include mobile
+    width: 100%
+    max-width: 100%
+    margin-left: 16px
+    margin-right: 16px
+
 
 .header-search__input
   width: 100%
@@ -124,5 +203,7 @@
   &.close
     background-image: url(@img/header/cross-black.svg)
     background-color: transparent
+  @include mobile
+    display: none
 
 
