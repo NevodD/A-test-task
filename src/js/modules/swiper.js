@@ -10,7 +10,7 @@ export const swiper = new Swiper(".swiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    // clickable: true,
+    clickable: true,
     // dynamicBullets: true,
     // renderBullet: (index, className) => {
     //   return `<span class ="${className}">${index+1}</span>`
@@ -19,7 +19,7 @@ export const swiper = new Swiper(".swiper", {
     // renderFraction: (currentClass, totalClass) => {
     //   return `Фото <span class ="${currentClass}"></span> из <span class ="${totalClass}"></span>`
     // },
-    type: "progressbar",
+    //type: "progressbar",
   },
 
   // Navigation arrows
@@ -41,10 +41,10 @@ export const swiper = new Swiper(".swiper", {
     onlyInViewport: true,
   },
 
-  mousewheel: {
-    sensitivity: 1,
-    // evetsTarget: ".swiper-img",
-  },
+  //mousewheel: {
+  //  sensitivity: 1,
+  //  evetsTarget: ".swiper-img",
+  //},
 
   // автовысота
   autoHeight: true,
@@ -53,7 +53,7 @@ export const swiper = new Swiper(".swiper", {
   // slidesPerView: 3,
 
   // отступ между слайдами
-  spaceBetween: 30,
+  spaceBetween: 0,
 
   // отключение если слайдов меньше чем нужно
   watchOverflow: true,
@@ -119,16 +119,17 @@ export const swiper = new Swiper(".swiper", {
   //   //  Тень
   //   slideShadows: true,
   // },
+  slidesPerView: 1,
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    480: {
-      slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-  },
+  //breakpoints: {
+  //  320: {
+  //    slidesPerView: 1,
+  //  },
+  //  480: {
+  //    slidesPerView: 2,
+  //  },
+  //  992: {
+  //    slidesPerView: 3,
+  //  },
+  //},
 });

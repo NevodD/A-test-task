@@ -2,45 +2,94 @@
 
 .swiper
   width: 100%
-  height: auto
-  margin: auto
+  height: 823px
+  margin-top: -136px
+  @include mobile
+    height: 602px
+
+    //margin-top: -240px
+
+  //position: relative
+  //z-index: 0
   // display: flex
   // justify-content: center
   // align-items: center
 
+.swiper-wrapper
+
 .swiper-slide
-  text-align: center
+  //text-align: center
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 50%), linear-gradient(10deg, #000 0%, rgba(0, 0, 0, 0.00) 60%)
+    
+
 
   // padding-bottom: 30px
 
 .swiper-img
   max-width: 100%
-  height: auto
+  height: 804px
+  object-fit: cover
+  @include mobile
+    height: 562px
+
+.swiper-pagination-wrapper
+  position: relative
+  bottom: 88px
+
 
 .swiper-button-next,
 .swiper-button-prev
+  width: 64px
+  height: 64px
+  border: 1px solid rgba(255, 255, 255, 0.24)
+  border-radius: 50%
   transition: all 0.2s linear
-  color: gray
+  color: #fff
   &:hover
-    color: black
+    //color: black
+    border: 2px solid rgba(255, 255, 255, 1)
+  @include mobile
+    display: none
+
+    
+.swiper-button-prev
+  left: auto
+  right: 110px
+.swiper-button-next
+  left: auto
+  right: 18px
+
 
 .swiper-button-next::after,
 .swiper-button-prev::after
-  font-size: 60px
+  font-size: 18px
 
 .swiper-pagination
   position: static
+  @include mobile
+    
+  
 
 .swiper-pagination-bullet
-  width: 20px
-  height: 20px
-  color: #fff
+  display: none
+  width: 8px
+  height: 8px
+  color: #C7C3C1
   font-size: 12px
   text-align: center
   line-height: 20px
+  @include mobile
+    display: block
 
 .swiper-pagination-bullet-active
-  background: #000
+  background: #38AB57
 
 .swiper-horizontal > .swiper-scrollbar
   background: #0f0
@@ -58,3 +107,49 @@
 // .swiper-pagination-bullets 
 //.swiper-pagination-horizontal
 //  bottom: 0
+
+
+.title
+  color: #FFF
+  font-size: 32px
+  font-weight: 500
+  line-height: 40px
+  max-width: 518px
+  text-align: left
+  margin-bottom: 40px
+
+
+.swiper-content
+  display: flex
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  justify-content: start
+  margin-left: 20px
+  @include mobile
+    margin-left: 0
+
+
+.title-wrapper
+  margin: auto auto 80px auto
+
+  
+.link-button
+  display: inline-flex
+  text-decoration: none
+  color: #fff
+  font-weight: 500
+  width: 197px
+  height: 48px
+  background-color: #38AB57
+  border-radius: 100px
+  background-image: url(@img/header/arrow-right.svg)
+  background-repeat: no-repeat
+  background-position: 77% 50%
+  padding-left: 40px
+  padding-right: 40px
+  justify-content: start
+  //text-align: left
+  

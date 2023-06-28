@@ -16,6 +16,3 @@ export function isWebp() {
     }
   });
 }
-
-
-console.log("hi");
