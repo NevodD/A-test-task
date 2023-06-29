@@ -1,0 +1,139 @@
+.products 
+	padding: 5px 20px
+	@include mobile
+		padding: 0
+
+	
+.description
+	font-size: 24px
+	line-height: 32px
+	@include mobile
+		font-size: 14px
+		line-height: 20px
+
+.products__description
+	max-width: 708px
+
+.products-item-wrapper 
+
+.products__list
+	display: grid
+	gap: 33px
+	grid-template-columns: repeat(4,1fr)
+	grid-auto-rows: 400px
+	padding: 15px 0
+	@include container
+		grid-template-columns: 1fr
+	@include mobile
+		grid-auto-rows: auto
+		gap: 16px
+	
+
+.products__link
+	position: relative
+	display: inline-block
+	width: 100%
+	height: 100%
+	text-decoration: none		
+	@include mobile
+		padding: 14px 20px
+		background-color: #fff
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		opacity: 0
+		transition: 0.3s
+		width: 56px
+		height: 56px
+		padding: 0
+		background-image: url(@img/products/link-before.svg)
+		background-position: 50% 50%
+		background-size: cover
+		@include container
+			display: none
+
+.products__link:hover.products__link::before
+	opacity: 1
+
+.products__link_half
+
+.products__item 
+	padding: 32px 30px 32px 32px
+	background-color: #F8F3F3
+	//max-width: 704px
+	//min-height: 400px
+	//height: 100%
+	border-radius: 24px
+	grid-column: span 2
+	background-repeat: no-repeat
+	background-position: 100% 100%
+	@include container
+		grid-column: span 1
+	@include mobile
+		padding: 160px 0 0 0
+		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 8px
+		background-size: 65%
+		background-position: 54% 3%
+
+
+
+.products__item_bg-center
+	background-position: 86% 52%
+	@include mobile
+		background-size: 42.5%
+		background-position: 50% 3%
+
+.products__item_bg-mobile
+	background-image: url(@img/products/5.png)
+	@include mobile
+		background-image: url(@img/products/5.1.png)
+		background-size: 100%
+		background-position: 54% 0%
+
+.products__item_half
+	grid-column: span 1
+	@include mobile
+		background-size: 85%
+		background-position: 54% -10%
+
+
+.products__title 
+	font-size: 24px
+	line-height: 32px
+	font-weight: 500
+	color: #000
+	margin: 0
+	@include mobile
+		font-size: 16px
+
+.products__text 
+	font-size: 16px
+	line-height: 24px
+	color: #8C7D76
+	margin: 10px 0
+	max-width: 340px
+	@include mobile
+		font-size: 14px
+		line-height: 20px
+		margin: 5px 0
+
+//.link-button_circle
+//	position: absolute
+//	bottom: 0
+//	opacity: 0
+//	transition: 0.3s
+//	width: 56px
+//	height: 56px
+//	padding: 0
+//	background-position: 50% 50%
+//	background-size: 35%
+//	@include container
+//		display: none
+
+
+
+
+

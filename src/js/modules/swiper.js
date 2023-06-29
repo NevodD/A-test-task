@@ -47,7 +47,7 @@ export const swiper = new Swiper(".swiper", {
   //},
 
   // автовысота
-  autoHeight: true,
+  //autoHeight: true,
 
   // кол-во слайдов для показа
   // slidesPerView: 3,
@@ -132,4 +132,23 @@ export const swiper = new Swiper(".swiper", {
   //    slidesPerView: 3,
   //  },
   //},
+  nested: true,
 });
+
+
+export const swiperTech = new Swiper(".mySwiper", {
+    //loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    nested: true,
+  });
+export const swiperTech2 = new Swiper(".mySwiper2", {
+    //loop: true,
+    spaceBetween: 10,
+    thumbs: {
+      swiper: swiperTech,
+    },
+    nested: true,
+  });

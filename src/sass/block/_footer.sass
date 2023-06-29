@@ -1,7 +1,194 @@
-footer
-  background-color: orange
-  background-image: url(@img/about/about-us-img.jpg)
-
+.footer
+  margin-top: 100px
+  background-color: #F8F3F3
   @include mobile
-    background-color: #fff
+    margin-top: 25px
+
+.footer__chung
+  display: flex
+  padding: 0 20px
+  @include container
+    flex-direction: column
+    padding: 0
+
+
+.footer__top
+  //padding: 64px 0
+
+.footer__left 
+  display: flex
+  width: 32%
+  flex-direction: column
+  justify-content: center
+  padding: 64px 0
+  @include container
+    width: 100%
+  @include mobile
+    padding: 17px 0
   
+
+.footer__left_top
+  border-bottom: 1px solid #C7C3C1
+  @include container
+    border-bottom: none
+
+
+.footer__left_center
+  padding-top: 60px
+  padding-bottom: 16px
+  @include container
+    padding-top: 16px
+  @include mobile
+    min-height: 150px
+    justify-content: space-between
+
+
+.footer__left_bottom
+  padding: 7px 0
+  @include container
+    order: 1
+    padding: 0
+
+  
+
+
+
+
+.footer__right
+  display: flex
+  width: 68%
+  //justify-content: space-around
+  padding-left: 85px
+  border-left: 1px solid #C7C3C1
+  @include container
+    border-left: none
+    width: 100%
+    padding-left: 0px
+  
+.footer__right_bottom
+  padding: 7px 0 7px 93px
+  justify-content: space-between
+  border-top: 1px solid #C7C3C1
+  @include container
+    padding-left: 0
+    border-top: 1px dashed #C7C3C1
+    flex-direction: column
+    padding: 0
+
+
+
+.footer__right_horizontal
+  gap: 146px
+  padding-top: 64px
+  padding-bottom: 64px
+  @include container
+    display: none
+
+.footer__right_vertical
+  flex-direction: column
+  padding-left: 93px
+  @include container
+    padding-left: 0
+  
+  
+  //text-align: center
+
+.footer__list
+  display: flex
+  //height: 100%
+  
+.footer__list_vertical 
+  flex-direction: column
+  justify-content: space-between
+  margin: 0
+
+
+
+.footer__item 
+
+.footer__link
+  color: #000
+  @include mobile
+    font-size: 14px
+
+
+.footer__center 
+
+
+.footer__text
+  margin-top: 3px
+  line-height: 24px
+  max-width: 80%
+  margin-bottom: 14px
+  @include mobile
+    font-size: 14px
+    margin: 0
+    line-height: 20px
+
+
+.footer__list_horizontal
+  display: flex
+  //padding-top: 10px
+  height: 104px
+  gap: 70px
+  margin: 0
+  align-items: center
+  border-top: 1px dashed #C7C3C1
+  border-bottom: 1px dashed #C7C3C1
+  @include container
+    border-top: none
+    flex-direction: column
+    align-items: start
+    gap: 15px
+  @include mobile
+    margin-top: 5px
+    height: 96px
+  
+
+  
+
+.footer__item_contacts
+  padding-left: 32px
+  background-repeat: no-repeat
+  background-position: 0 50%
+  @include mobile
+    padding-left: 30px
+    background-size: 12%
+
+.footer__text_big 
+  display: flex
+  align-items: center
+  color: #C7C3C1
+  font-size: 40px
+  font-weight: 500
+  //line-height: 100%
+  line-height: 32px
+  height: 111px
+  margin: 0
+  opacity: 0.4
+  @include mobile
+    font-size: 24px
+    height: 96px
+    max-width: 90%
+
+.footer__bottom 
+
+
+.footer__text_small 
+  color: #C7C3C1
+  font-size: 14px
+  padding: 14px 0
+
+.footer__link_small 
+  display: inline-flex
+  align-items: center
+  color: #C7C3C1
+  font-size: 14px
+  margin-bottom: 14px
+  @include container
+    margin-left: -0.5em
+  @include mobile
+    margin-bottom: 0
+    padding: 20px 0
+    border-top: 1px solid #C7C3C1
+    border-bottom: 1px solid #C7C3C1
