@@ -16,3 +16,16 @@ export function isWebp() {
     }
   });
 }
+
+const playBtn = document.querySelector(".video-play");
+const	video = document.querySelector(".video");
+	playBtn.addEventListener('click', function() {
+		video.play();
+		video.setAttribute('controls', "controls");
+		playBtn.style.display="none";
+	});
+	video.addEventListener('ended', function() {
+		this.src = this.src;
+		playBtn.style.display = "block";
+		video.removeAttribute('controls');
+	});
