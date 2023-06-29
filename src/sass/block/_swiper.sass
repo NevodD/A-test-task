@@ -4,8 +4,10 @@
   width: 100%
   height: 823px
   margin-top: -136px
+  @include container
+    margin-top: -240px
   @include mobile
-    height: 602px
+    height: 770px
 
     //margin-top: -240px
 
@@ -37,11 +39,15 @@
   height: 804px
   object-fit: cover
   @include mobile
-    height: 562px
+    height: 710px
 
 .swiper-pagination-wrapper
   position: relative
   bottom: 88px
+  @include mobile
+    left: 0
+    right: 0
+    bottom: 0
 
 
 .swiper-button-next,
@@ -74,6 +80,8 @@
 .swiper-pagination
   position: static
   @include mobile
+    display: flex
+    justify-content: center
     
   
 
@@ -117,6 +125,10 @@
   max-width: 518px
   text-align: left
   margin-bottom: 40px
+  @include mobile
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 22px
 
 
 .swiper-content
@@ -134,6 +146,8 @@
 
 .title-wrapper
   margin: auto auto 80px auto
+  @include mobile
+    margin: auto auto 35px auto
 
   
 .link-button
@@ -152,4 +166,5 @@
   padding-right: 40px
   justify-content: start
   //text-align: left
+
   
