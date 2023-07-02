@@ -62,7 +62,7 @@ export const swiper = new Swiper(".swiper", {
   slidesPerGroup: 1,
 
   // активный слайд по центу
-  // centeredSlides: true,
+  //centeredSlides: true,
 
   // стартовый слайд
   initialSlide: 0,
@@ -138,6 +138,8 @@ export const swiper = new Swiper(".swiper", {
 
 export const swiperTech = new Swiper(".mySwiper", {
     //loop: true,
+    grabCursor: true,
+
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
@@ -146,7 +148,9 @@ export const swiperTech = new Swiper(".mySwiper", {
   });
 export const swiperTech2 = new Swiper(".mySwiper2", {
     //loop: true,
-    spaceBetween: 10,
+    grabCursor: true,
+    slidesPerView: 1,
+    //spaceBetween: 10,
     thumbs: {
       swiper: swiperTech,
     },

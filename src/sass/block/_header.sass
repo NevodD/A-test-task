@@ -45,19 +45,24 @@
     margin-top: 10px
     margin-bottom: 100px
 
+
 .header__content
   width: 54%
+  @include container
+    width: auto
   @include mobile
+    display: none
     position: absolute
     top: 0
     left: 100% 
     width: 100%
     height: 100%
     background-color: #fff
-    display: grid
     align-items: center
     transition: 0.3s
+    //visibility: hidden
     &.active
+      display: grid
       left: 0
 
 .header-menu-wrapper
@@ -111,10 +116,15 @@
 
 .header-top-menu__item
   opacity: 0.7
+  transition: 0.2s
+  &:hover
+    transform: scale(1.2)
   @include mobile
     border-bottom: 1px solid #F8F3F3
     width: 100%
     height: 48px 
+    &:hover
+      transform: scale(1)
   & > a
     color: #fff
     @include mobile
@@ -131,10 +141,15 @@
 
 
 .header-main-menu__item
+  transition: 0.2s
+  &:hover
+    transform: scale(1.2)
   @include mobile
     border-bottom: 1px solid #F8F3F3
     width: 100%
     height: 50px
+    &:hover
+      transform: scale(1)
   & > a
     color: #fff
     font-size: 20px
