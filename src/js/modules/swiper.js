@@ -9,7 +9,7 @@ export const swiper = new Swiper(".swiper", {
 
   // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-bullets",
     clickable: true,
     // dynamicBullets: true,
     // renderBullet: (index, className) => {
